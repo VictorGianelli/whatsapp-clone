@@ -2,4 +2,5 @@
 <resources>
     <dimen name="largura_logo">200dp</dimen>
     <dimen name="altura_logo">163dp</dimen>
+    <dimen name="padding_background">8dp</dimen>
 </resources>

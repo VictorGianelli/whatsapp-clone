@@ -1,7 +1,9 @@
 package br.com.whatsappandroid.cursoandroid.whatsapp2.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import br.com.whatsappandroid.cursoandroid.whatsapp2.R;
 
@@ -12,4 +14,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
     }
+
+    public void abrirCadastroUsuario(View view){
+        Intent intent = new Intent(LoginActivity.this, CadastroUsuarioActivity.class);
+        startActivity(intent);
+    }
+
 }
