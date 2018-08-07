@@ -12,15 +12,10 @@ import br.com.whatsappandroid.cursoandroid.whatsapp2.config.ConfiguracaoFirebase
 
 public class LoginActivity extends AppCompatActivity {
 
-    private DatabaseReference referenciaFirebase;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-        referenciaFirebase = ConfiguracaoFirebase.getFirebase();
-        referenciaFirebase.child("pontos").setValue(800);
 
     }
 

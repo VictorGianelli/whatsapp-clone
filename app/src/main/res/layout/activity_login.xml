@@ -23,24 +23,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="249dp"
         android:ems="10"
         android:hint="Digite seu e-mail"
         android:inputType="textEmailAddress"
-        android:layout_alignParentRight="true" />
+        android:textColor="@android:color/white" />
 
     <EditText
         android:id="@+id/edit_login_senha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edit_login_email"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/edit_login_email"
         android:layout_marginBottom="200dp"
         android:ems="10"
         android:hint="Digite sua senha"
         android:inputType="textPassword"
-        android:layout_alignLeft="@+id/edit_login_email" />
+        android:textColor="@android:color/white" />
 
     <Button
         android:id="@+id/bt_logar"

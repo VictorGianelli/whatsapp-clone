@@ -29,7 +29,8 @@
         android:layout_marginTop="244dp"
         android:ems="10"
         android:hint="Digite seu nome"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textColor="@android:color/white" />
 
     <EditText
         android:id="@+id/edit_cadastro_email"
@@ -40,7 +41,8 @@
         android:layout_marginBottom="211dp"
         android:ems="10"
         android:hint="Digite seu e-mail"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:textColor="@android:color/white" />
 
     <EditText
         android:id="@+id/edit_cadastro_senha"
@@ -51,7 +53,8 @@
         android:layout_marginBottom="157dp"
         android:ems="10"
         android:hint="Digite sua senha"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textColor="@android:color/white" />
 
     <Button
         android:id="@+id/bt_cadastrar"
