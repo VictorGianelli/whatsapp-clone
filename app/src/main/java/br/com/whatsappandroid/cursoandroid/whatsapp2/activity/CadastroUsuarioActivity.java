@@ -12,6 +12,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
 
 import br.com.whatsappandroid.cursoandroid.whatsapp2.R;
@@ -66,8 +69,25 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
                     usuario.setId(usuarioFirebase.getUid());
                     usuario.salvar();
 
+                    autenticacao.signOut();
+                    finish();
+
                 }else{
-                    Toast.makeText(CadastroUsuarioActivity.this, "Erro ao cadastrar usuário", Toast.LENGTH_LONG ).show();
+                    String erro = "";
+                    try{
+                        throw task.getException();
+                    } catch (FirebaseAuthWeakPasswordException e) {
+                        erro = "Escolha uma senha que contenha letras e números.";
+                    } catch (FirebaseAuthInvalidCredentialsException e) {
+                        erro = "Email indicado não é válido.";
+                    } catch (FirebaseAuthUserCollisionException e) {
+                        erro = "Já existe uma conta com esse e-mail.";
+                    } catch (Exception e) {
+                        erro = "Erro ao efetuar o cadastro.";
+                        e.printStackTrace();
+                    }
+
+                    Toast.makeText(CadastroUsuarioActivity.this, "Erro :"+ erro, Toast.LENGTH_LONG ).show();
                 }
             }
         });
