@@ -51,7 +51,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="131dp"
-        android:text="@string/botao_logar" />
+        android:text="@string/botao_logar"
+        android:theme="@style/botaoPadrao"/>
 
     <TextView
         android:id="@+id/textView"
