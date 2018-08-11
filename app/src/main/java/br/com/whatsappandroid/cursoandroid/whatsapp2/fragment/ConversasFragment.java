@@ -1,6 +1,7 @@
 package br.com.whatsappandroid.cursoandroid.whatsapp2.fragment;
 
 
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
