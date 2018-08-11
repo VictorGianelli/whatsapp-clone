@@ -34,9 +34,9 @@ public class LoginActivity extends AppCompatActivity {
 
         verificarUsuarioLogado();
 
-        email = (EditText) findViewById(R.id.edit_login_email);
-        senha = (EditText) findViewById(R.id.edit_login_senha);
-        botaoLogar = (Button) findViewById(R.id.bt_logar);
+        email = findViewById(R.id.edit_login_email);
+        senha = findViewById(R.id.edit_login_senha);
+        botaoLogar = findViewById(R.id.bt_logar);
 
         botaoLogar.setOnClickListener(new View.OnClickListener() {
             @Override
