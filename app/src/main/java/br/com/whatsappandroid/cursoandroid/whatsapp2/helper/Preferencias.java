@@ -24,4 +24,8 @@ public class Preferencias {
         editor.commit();
     }
 
+    public String getIdentificador(){
+        return preferences.getString(CHAVE_IDENTIFICADOR, null);
+    }
+
 }
