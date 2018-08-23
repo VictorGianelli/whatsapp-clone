@@ -42,6 +42,7 @@ public class ConversaActivity extends AppCompatActivity {
 
     // dados do rementente
     private String idUsuarioRemetente;
+    private String nomeUsuarioRemetente;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +64,7 @@ public class ConversaActivity extends AppCompatActivity {
         // dados do usuário logado
         Preferencias preferencias = new Preferencias(ConversaActivity.this);
         idUsuarioRemetente = preferencias.getIdentificador();
+        nomeUsuarioRemetente = preferencias.getNome();
 
         // Configura toolbar
         toolbar.setTitle( nomeUsuarioDestinatario );
@@ -144,10 +146,13 @@ public class ConversaActivity extends AppCompatActivity {
                         // salvamos conversa para o destinatario
                         conversa = new Conversa();
                         conversa.setIdUsuario(idUsuarioRemetente);
-                        conversa.setNome();
+                        conversa.setNome(nomeUsuarioRemetente);
                         conversa.setMensagem(textoMensagem);
 
-                        salvarConversa(idUsuarioDestinatario, idUsuarioRemetente,conversa);
+                        Boolean retornoConversaDestinatario = salvarConversa(idUsuarioDestinatario, idUsuarioRemetente,conversa);
+                        if (!retornoConversaDestinatario){
+                            Toast.makeText(ConversaActivity.this, "Problema ao salvar conversa para o destinatário, tente novamente!", Toast.LENGTH_SHORT).show();
+                        }
                     }
 
 
