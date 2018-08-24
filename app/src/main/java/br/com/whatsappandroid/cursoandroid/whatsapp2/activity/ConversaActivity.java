@@ -154,8 +154,6 @@ public class ConversaActivity extends AppCompatActivity {
                             Toast.makeText(ConversaActivity.this, "Problema ao salvar conversa para o destinatário, tente novamente!", Toast.LENGTH_SHORT).show();
                         }
                     }
-
-
                     editMensagem.setText("");
                 }
             }
